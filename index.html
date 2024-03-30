@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="menu.js" defer></script>
-
+    <script src="scroll.js" ></script>
 
     <title>Agência BRN</title>
 </head>
@@ -31,14 +31,14 @@
             <nav class="menu-desktop">
                 <ul>
                     <li><a href="#">Início</a></li>
-                    <li><a href="#especialidades">Especialidades</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#portfolio">Projetos</a></li>
+                    <li><a href="#" onclick="scrollToSection('especialidades')">Especialidades</a></li>
+                    <li><a href="#" onclick="scrollToSection('sobre')">Sobre</a></li>
+                    <li><a href="#" onclick="scrollToSection('portfolio')">Projetos</a></li>
                 </ul>
             </nav>
 
             <div class="btn-contato">
-                <a href="#">
+                <a href="#" onclick="scrollToSection('formulario')">
                     <button>Contato</button>
                 </a>
             </div><!--btn-contato-->
@@ -55,13 +55,14 @@
                 <nav>
                     <ul>
                         <li><a href="#">Início</a></li>
-                        <li><a href="#">Especialidades</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Projetos</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="#" onclick="scrollToSection('especialidades')">Especialidades</a></li>
+                        <li><a href="#" onclick="scrollToSection('sobre')">Sobre</a></li>
+                        <li><a href="#" onclick="scrollToSection('portfolio')">Projetos</a></li>
+                        <li><a href="#" onclick="scrollToSection('formulario')">Contato</a></li>
                     </ul>
                 </nav>
-
+       
+         
             </div><!--menu-mobile-->
             <div class="overlay-menu" id="overlay-menu"></div>
         </div><!--interface-->
@@ -76,8 +77,8 @@
                         <p>Criatividade e inovação andam lado a lado. Com uma combinação única de design impactante, funcionalidade intuitiva e otimização para resultados, estou pronto(a) para criar a presença online dos seus sonhos.</p>
 
                         <div class="btn-contato">
-                            <a href="#">
-                                <button>Entre em contato</button>
+                            <a href="" download>
+                                <button>Download CV</button>
                             </a>
                         </div>
                     </div><!--txt-topo-site-->
@@ -89,7 +90,7 @@
             </div><!--interface-->
         </section><!--topo-do-site-->
 
-        <section id="especialidades" class="especiliadades">
+        <section id="especialidades" class="especialidades">
             <div class="interface">
                 <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
                 <div class="flex">
@@ -108,7 +109,7 @@
                     
                 </div><!--flex-->
             </div><!--interface-->
-        </section><!--especiliadades-->
+        </section><!--especialidades-->
 
         <section id="sobre" class="sobre">
             <div class="interface">
@@ -122,9 +123,9 @@
                         <p>Com uma experiência de 3 anos como desenvolvedor front-end, sou especializado na criação de landing pages altamente eficazes e no desenvolvimento de e-commerce. Com uma paixão por design e experiência do usuário, trabalho para transformar conceitos criativos em experiências digitais envolventes e funcionais. Minha abordagem centrada no usuário garante que cada projeto seja otimizado para conversões e ofereça uma jornada do cliente excepcional.</p>
                         <p>Com habilidades sólidas em HTML, CSS, JavaScript e experiência em plataformas como Shopify, WooCommerce e Magento, tenho desenvolvido landing pages e lojas online que não apenas se destacam visualmente, mas também impulsionam o crescimento dos negócios dos meus clientes. Meu compromisso com a qualidade, acessibilidade e desempenho garante que cada projeto atenda aos mais altos padrões da indústria. Estou sempre buscando novas maneiras de melhorar minhas habilidades e criar experiências digitais que realmente se destaquem no mercado.</p>
                         <div class="btn-social">
-                            <a href="#"><button><i class="bi bi-instagram"></i></button></a>
-                            <a href="#"><button><i class="bi bi-youtube"></i></button></a>
-                            <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href="https://github.com/Lucas-Gabriel0"><button><i class="bi bi-github"></i></button></a>
+                            <a  href="mailto:devlukkas@gmail.com"><button><i class="bi bi-envelope-fill"></i></button></a>
+                            <a href="https://www.linkedin.com/in/lucas-soares-2428122a7/"><button><i class="bi bi-linkedin"></i></button></a>
                         </div><!--btn-social-->
                     </div><!--txt-sobre-->
                 </div><!--flex-->
@@ -138,7 +139,7 @@
                     <div class="img-port" style="background-image: url(images/imagem.jpg);">
                         <div class="overlay">Projeto 1</div>
                     </div>
-                    <div class="img-port" style="background-image: url(images/imagem.jpg);">
+                    <div class="img-port" style="background-image: url(images/BalleBot.png);">
                         <div class="overlay">Projeto 2</div>
                     </div>
                     <div class="img-port" style="background-image: url(images/imagem.jpg);">
@@ -152,11 +153,11 @@
             <div class="interface">
                 <h2 class="titulo">FALA <span>COMIGO.</span></h2>
 
-                <form action="">
-                    <input type="text" name="" id="" placeholder="Seu nome completo:" required>
-                    <input type="text" name="" id="" placeholder="Seu e-mail:" required>
-                    <input type="text" name="" id="" placeholder="Seu celular:">
-                    <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
+                <form method="post" action="envia.php">
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required>
+                    <input type="text" name="email" id="email" placeholder="Seu e-mail:" required>
+                    <input type="text" name="telefone" id="telefone" placeholder="Seu celular:">
+                    <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" required></textarea>
                     <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
                 </form>
             </div><!--interface-->
@@ -172,9 +173,9 @@
                         <img src="images/logo.png" alt="Logotipo Agência BRN">
                     </div><!--logo-footer-->
                     <div class="btn-social">
-                        <a href="#"><button><i class="bi bi-instagram"></i></button></a>
-                        <a href="#"><button><i class="bi bi-youtube"></i></button></a>
-                        <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
+                        <a href="https://github.com/Lucas-Gabriel0"><button><i class="bi bi-github"></i></button></a>
+                        <a  href="mailto:devlukkas@gmail.com"><button><i class="bi bi-envelope-fill"></i></button></a>
+                        <a href="https://www.linkedin.com/in/lucas-soares-2428122a7/"><button><i class="bi bi-linkedin"></i></button></a>
                     </div><!--btn-social-->
                 </div>
             </div><!--line-footer-->
